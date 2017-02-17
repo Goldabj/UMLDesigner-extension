@@ -3,9 +3,21 @@ package gui;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.text.TextFlow;
 import projectRunner.Configuration;
 import projectRunner.ProgramRunner;
 import projectRunner.ProjectModel;
@@ -17,7 +29,7 @@ import projectRunner.ProjectModel;
  * @author goldacbj
  *
  */
-public class Controller {
+public class Controller implements Initializable{
 	private ProjectModel pm;
 	private Configuration config;
 	private ProgramRunner runner;
@@ -27,7 +39,37 @@ public class Controller {
 	public static final String PRIVATE_PROTECTIOIN = "-private";
 	public static final String PROTECTED_PROTECTION = "-protected";
 	public static final String PUBLIC_PROTECTION = "-public";
-
+	public static final String DEFAULT_FILECREATOR = "graphvizcreator.GraphVizCreator";
+	
+	// TODO: add patterns to drawers support 
+	
+	@FXML
+	private SplitMenuButton protectionLevelOption;
+	
+	@FXML
+	private CheckBox recursionBox;
+	
+	@FXML
+	private TextField fileCreatorText;
+	
+	@FXML
+	private TextArea whiteListText;
+	
+	@FXML
+	private TextArea blackListText;
+	
+	@FXML
+	private TextArea patternDetectorsText;
+	
+	@FXML
+	private TextField settingsFileText;
+	
+	@FXML
+	private Button settingsCreateBttn;
+	
+	@FXML
+	private Button regCreateBttn;
+	
 	public Controller() {
 		this.pm = ProjectModel.getInstance();
 		this.config = Configuration.getInstance();
@@ -92,6 +134,70 @@ public class Controller {
 				}
 			}
 		}
+		
+	}
+	
+	@FXML
+	public void handleRegRun(ActionEvent e) {
+		// handles the running of the program
+		// gets all info from the fields
+		// then sets the config
+		// then calls run
+		String protectLevel = this.protectionLevelOption.getText();
+		this.changeProtectionLevel(protectLevel);
+		
+		String filecreator = this.fileCreatorText.getText();
+		if (filecreator == null || filecreator.equals("")) {
+			this.setFileCreator(DEFAULT_FILECREATOR);
+		}else {
+			this.setFileCreator(filecreator);
+		}
+		
+		boolean recursive = this.recursionBox.isSelected();
+		this.setRecursionOn(recursive);
+		
+		String whiteListText = this.whiteListText.getText();
+		String[] classes = whiteListText.split(",");
+		List<String> whiteList = new ArrayList<>();
+		for (int i = 0; i < classes.length; i++) {
+			String clazz = classes[i].trim();
+			whiteList.add(clazz);
+		}
+		this.setWhiteList(whiteList);
+		
+		String blackListText = this.blackListText.getText();
+		String[] bClasses = blackListText.split(",");
+		List<String> blackList = new ArrayList<>();
+		for (int i = 0; i < bClasses.length; i++) {
+			String clazz = bClasses[i].trim();
+			blackList.add(clazz);
+		}
+		this.setBlackList(blackList);
+		
+		String patternDectText = this.patternDetectorsText.getText();
+		String[] detectors = patternDectText.split(",");
+		List<String> detectorsL = new ArrayList<>();
+		for (int i = 0; i < detectors.length; i++) {
+			String dect = detectors[i].trim();
+			detectorsL.add(dect);
+		}
+		this.setPatternDetectors(detectorsL);
+	
+		
+		// TODO: add patterns and their drawers
+		
+		this.run();
+	}
+	
+	@FXML
+	public void handleSettingsFileRun(ActionEvent e) {
+		String settingsFile = this.settingsFileText.getText();
+		this.setSettingsFile(settingsFile);
+		this.run();
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
 		
 	}
 	

@@ -7,8 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import projectRunner.Phase;
+import projectRunner.ProjectModel;
 
-public class GUIMain extends Application{
+public class GUIMain extends Application implements Phase{
 
 	public static void main(String[] args) {
 		launch(args);
@@ -28,6 +30,16 @@ public class GUIMain extends Application{
 		//====================================Table================================================
 		
 		
+	}
+
+	@Override
+	public ProjectModel getResults() {
+		return ProjectModel.getInstance();
+	}
+
+	@Override
+	public void runPhase(ProjectModel arg0) {
+		main(new String[0]); // idk if this will really work or not
 	}
 
 }

@@ -11,27 +11,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="811.0" prefWidth="1091.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<AnchorPane prefHeight="811.0" prefWidth="1091.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
    <children>
       <Label id="whiteListClassesLabel" layoutX="234.0" layoutY="627.0" text="Whitelist Classes" />
-      <SplitMenuButton id="protectionLevelOption" layoutX="76.0" layoutY="328.0" mnemonicParsing="false" text="Protection Level">
+      <SplitMenuButton id="protectionLevelOption" fx:id="protectionLevelOption" layoutX="76.0" layoutY="328.0" mnemonicParsing="false" text="Protection Level">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
         </items>
       </SplitMenuButton>
       <Label id="blackListClassesLabel" layoutX="602.0" layoutY="627.0" text="BlackList Classes" />
-      <CheckBox id="recursionOption" layoutX="123.0" layoutY="406.0" mnemonicParsing="false" text="Recursion" />
+      <CheckBox id="recursionOption" fx:id="recursionBox" layoutX="123.0" layoutY="406.0" mnemonicParsing="false" text="Recursion" />
       <Label id="setBlackListClassesLabel" layoutX="952.0" layoutY="627.0" text="Pattern Detectors" />
-      <TextField id="settingsFileInput" layoutX="651.0" layoutY="131.0" promptText="Specify Settings File" />
+      <TextField id="settingsFileInput" fx:id="settingsFileText" layoutX="651.0" layoutY="131.0" promptText="Specify Settings File" />
       <Label id="settingsFileLabel" layoutX="847.0" layoutY="136.0" text="Settings File" />
-      <TextField id="fileCreatorInput" layoutX="18.0" layoutY="483.0" promptText="ex: graphVizCreator" />
+      <TextField id="fileCreatorInput" fx:id="fileCreatorText" layoutX="18.0" layoutY="483.0" promptText="ex: graphVizCreator" />
       <Label id="fileCreatorLabel" layoutX="214.0" layoutY="488.0" text="File Creator" />
       <Label id="whiteListClassesLabel" layoutX="546.0" layoutY="312.0" text="Please include a pattern with a drawer" />
-      <TextArea id="whiteListClassesInput" layoutX="23.0" layoutY="564.0" prefHeight="128.0" prefWidth="200.0" promptText="Specify Whitelist Classes" />
-      <TextArea id="blackListInput" layoutX="391.0" layoutY="564.0" prefHeight="128.0" prefWidth="200.0" promptText="Specify BlackList Classes" />
-      <TextArea id="patternDetectorInput" layoutX="743.0" layoutY="564.0" prefHeight="128.0" prefWidth="200.0" promptText="Specify Pattern Dectecors" />
+      <TextArea id="whiteListClassesInput" fx:id="whiteListText" layoutX="23.0" layoutY="564.0" prefHeight="128.0" prefWidth="200.0" promptText="Specify Whitelist Classes" />
+      <TextArea id="blackListInput" fx:id="blackListText" layoutX="391.0" layoutY="564.0" prefHeight="128.0" prefWidth="200.0" promptText="Specify BlackList Classes" />
+      <TextArea id="patternDetectorInput" fx:id="patternDetectorsText" layoutX="743.0" layoutY="564.0" prefHeight="128.0" prefWidth="200.0" promptText="Specify Pattern Dectecors" />
       <Separator layoutX="7.0" layoutY="198.0" prefHeight="21.0" prefWidth="1077.0" />
       <Label id="settingsFileInstructions" layoutX="154.0" layoutY="136.0" text="If you have your own settings file, please use this top option only" />
       <Label id="whiteListClassesLabel" layoutX="396.0" layoutY="33.0" text="BBV UML Designer">
@@ -40,7 +39,7 @@
          </font>
       </Label>
       <Label id="defaultInstructions" layoutX="256.0" layoutY="237.0" text="If you want to run UML Designer using the default settings, use this bottom option only" />
-      <Button id="createUsingSettingsFile" layoutX="954.0" layoutY="131.0" mnemonicParsing="false" text="Create Design" />
-      <Button id="createUsingDefault" layoutX="455.0" layoutY="739.0" mnemonicParsing="false" text="Create Design" />
+      <Button id="createUsingSettingsFile" fx:id="settingsCreateBttn" layoutX="954.0" layoutY="131.0" mnemonicParsing="false" onAction="#handleSettingsFileRun" text="Create Design" />
+      <Button id="createUsingDefault" fx:id="regCreateBttn" layoutX="455.0" layoutY="739.0" mnemonicParsing="false" onAction="#handleRegRun" text="Create Design" />
    </children>
 </AnchorPane>
