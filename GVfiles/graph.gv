@@ -1,30 +1,423 @@
 digraph UML_Created { 
 rankdir=BT;
 splines=ortho;
-testclasses_LawDemeter2  [
+graphvizcreator_AbstractPatternDrawer  [
 shape="record",
-label= "{testclasses_LawDemeter2|- java_lang_String : s\l|+ \<init\>(void) : void\l+ badMethod(testclasses_LottaFeildsClass, void) : void\l}" 
+label= "{\<\<Abstract\>\>\ngraphvizcreator_AbstractPatternDrawer|+ \<init\>(umlentities_IDrawer, umlentities_IUMLEntity, void) : void\l+ \<init\>(void) : void\l+ setDecorated(umlentities_IDrawer, void) : void\l+ getEntity(umlentities_IUMLEntity) : umlentities_IUMLEntity\l+ draw(java_lang_String) : java_lang_String\l+ setEntity(umlentities_IUMLEntity, void) : void\l}" 
 ];
-testclasses_LawDemeter2 -> java_lang_String [arrowhead="vee", style="solid", dir="forward" ]; 
-testclasses_LawDemeter2 -> testclasses_LottaFeildsClass [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_AbstractPatternDrawer -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_AbstractPatternDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_AbstractPatternDrawer -> umlentities_IDrawer [arrowhead="onormal", style="dashed", dir="forward" ]; 
 
-java_lang_String  [
+graphvizcreator_BadInheritanceDependencyDrawer  [
 shape="record",
-label= "{java_lang_String|- char[] : value\l- int : hash\l- long : serialVersionUID\l- java_io_ObjectStreamField[] : serialPersistentFields\l+ java_util_Comparator\<java_lang_String\> : CASE_INSENSITIVE_ORDER\l|+ \<init\>(void) : void\l+ \<init\>(java_lang_String, void) : void\l+ \<init\>(char[], void) : void\l+ \<init\>(char[], void) : void\l+ \<init\>(int[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(byte[], void) : void\l- static checkBounds(byte[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(byte[], void) : void\l+ \<init\>(java_lang_StringBuffer, void) : void\l+ \<init\>(java_lang_StringBuilder, void) : void\l+ \<init\>(char[], void) : void\l+ length(int) : int\l+ isEmpty(boolean) : boolean\l+ charAt(int, char) : char\l+ codePointAt(int, int) : int\l+ codePointBefore(int, int) : int\l+ codePointCount(int, int) : int\l+ offsetByCodePoints(int, int) : int\l+ getChars(char[], void) : void\l+ getChars(int, void) : void\l+ getBytes(int, void) : void\l+ getBytes(java_lang_String, byte[]) : byte[]\l+ getBytes(java_nio_charset_Charset, byte[]) : byte[]\l+ getBytes(byte[]) : byte[]\l+ equals(java_lang_Object, boolean) : boolean\l+ contentEquals(java_lang_StringBuffer, boolean) : boolean\l- nonSyncContentEquals(java_lang_AbstractStringBuilder, boolean) : boolean\l+ contentEquals(java_lang_CharSequence, boolean) : boolean\l+ equalsIgnoreCase(java_lang_String, boolean) : boolean\l+ compareTo(java_lang_String, int) : int\l+ compareToIgnoreCase(java_lang_String, int) : int\l+ regionMatches(int, int, boolean) : boolean\l+ regionMatches(boolean, int, boolean) : boolean\l+ startsWith(java_lang_String, int, boolean) : boolean\l+ startsWith(java_lang_String, boolean) : boolean\l+ endsWith(java_lang_String, boolean) : boolean\l+ hashCode(int) : int\l+ indexOf(int, int) : int\l+ indexOf(int, int) : int\l- indexOfSupplementary(int, int) : int\l+ lastIndexOf(int, int) : int\l+ lastIndexOf(int, int) : int\l- lastIndexOfSupplementary(int, int) : int\l+ indexOf(java_lang_String, int) : int\l+ indexOf(java_lang_String, int, int) : int\l+ static indexOf(char[], int, int) : int\l+ static indexOf(char[], int) : int\l+ lastIndexOf(java_lang_String, int) : int\l+ lastIndexOf(java_lang_String, int, int) : int\l+ static lastIndexOf(char[], int, int) : int\l+ static lastIndexOf(char[], int) : int\l+ substring(int, java_lang_String) : java_lang_String\l+ substring(int, java_lang_String) : java_lang_String\l+ subSequence(int, java_lang_CharSequence) : java_lang_CharSequence\l+ concat(java_lang_String, java_lang_String) : java_lang_String\l+ replace(char, java_lang_String) : java_lang_String\l+ matches(java_lang_String, boolean) : boolean\l+ contains(java_lang_CharSequence, boolean) : boolean\l+ replaceFirst(java_lang_String, java_lang_String, java_lang_String) : java_lang_String\l+ replaceAll(java_lang_String, java_lang_String, java_lang_String) : java_lang_String\l+ replace(java_lang_CharSequence, java_lang_CharSequence, java_lang_String) : java_lang_String\l+ split(java_lang_String, int, java_lang_String[]) : java_lang_String[]\l+ split(java_lang_String, java_lang_String[]) : java_lang_String[]\l+ static join(java_lang_CharSequence, java_lang_CharSequence[], java_lang_String) : java_lang_String\l+ static join(java_lang_CharSequence, java_lang_Iterable\<null\>, java_lang_String) : java_lang_String\l+ toLowerCase(java_util_Locale, java_lang_String) : java_lang_String\l+ toLowerCase(java_lang_String) : java_lang_String\l+ toUpperCase(java_util_Locale, java_lang_String) : java_lang_String\l+ toUpperCase(java_lang_String) : java_lang_String\l+ trim(java_lang_String) : java_lang_String\l+ toString(java_lang_String) : java_lang_String\l+ toCharArray(char[]) : char[]\l+ static format(java_lang_String, java_lang_Object[], java_lang_String) : java_lang_String\l+ static format(java_util_Locale, java_lang_String, java_lang_Object[], java_lang_String) : java_lang_String\l+ static valueOf(java_lang_Object, java_lang_String) : java_lang_String\l+ static valueOf(char[], java_lang_String) : java_lang_String\l+ static valueOf(char[], java_lang_String) : java_lang_String\l+ static copyValueOf(char[], java_lang_String) : java_lang_String\l+ static copyValueOf(char[], java_lang_String) : java_lang_String\l+ static valueOf(boolean, java_lang_String) : java_lang_String\l+ static valueOf(char, java_lang_String) : java_lang_String\l+ static valueOf(int, java_lang_String) : java_lang_String\l+ static valueOf(long, java_lang_String) : java_lang_String\l+ static valueOf(float, java_lang_String) : java_lang_String\l+ static valueOf(double, java_lang_String) : java_lang_String\l+ intern(java_lang_String) : java_lang_String\l+ compareTo(java_lang_Object, int) : int\l+ static \<clinit\>(void) : void\l}" 
+label= "{graphvizcreator_BadInheritanceDependencyDrawer|+ \<init\>(umlentities_IDrawer, umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
 ];
-java_lang_String -> java_lang_String [arrowhead="vee", style="solid", headlabel="1__n", dir="forward"]; 
+graphvizcreator_BadInheritanceDependencyDrawer -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_BadInheritanceDependencyDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_BadInheritanceDependencyDrawer -> patternparser_BadInheritanceDependencyPattern [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_BadInheritanceDependencyDrawer -> graphvizcreator_AbstractPatternDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
 
-testclasses_LottaFeildsClass  [
+graphvizcreator_BadInheritanceDrawer  [
 shape="record",
-label= "{testclasses_LottaFeildsClass|+ java_lang_String : string\l+ java_lang_Double : doble\l+ java_util_List : list\l+ org_objectweb_asm_tree_ClassNode : cNode\l+ java_awt_Color : color\l|+ \<init\>(void) : void\l}" 
+label= "{graphvizcreator_BadInheritanceDrawer|+ \<init\>(umlentities_IDrawer, umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
 ];
-testclasses_LottaFeildsClass -> java_lang_String [arrowhead="vee", style="solid", dir="forward" ]; 
+graphvizcreator_BadInheritanceDrawer -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_BadInheritanceDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_BadInheritanceDrawer -> patternparser_BadInheritancePattern [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_BadInheritanceDrawer -> graphvizcreator_AbstractPatternDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
 
-testclasses_LawDem1   [ style="filled", fillcolor="cyan", color="black", 
+graphvizcreator_GraphVizCreator  [
 shape="record",
-label=  "{testclasses_LawDem1 \n\<LawOfDemeterViolation\>|+ \<init\>(void) : void\l+ specailMethod(testclasses_LottaFeildsClass, void) : void\l}" 
+label= "{graphvizcreator_GraphVizCreator|+ \<init\>(java_util_List\<umlentities_IUMLNode\>, void) : void\l+ \<init\>(void) : void\l+ setEntities(java_util_List\<umlentities_IUMLNode\>, void) : void\l+ setRenderers(void) : void\l+ createFile(void) : void\l+ getFile(java_io_File) : java_io_File\l+ addRenderer(java_lang_String, java_lang_Class\<null\>, void) : void\l}" 
 ];
-testclasses_LawDem1 -> testclasses_LottaFeildsClass  [ arrowhead="vee", style="dashed", dir="forward" ]; 
-testclasses_LawDem1 -> java_lang_String   [  color=cyan, arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GraphVizCreator -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+graphvizcreator_GraphVizCreator -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+graphvizcreator_GraphVizCreator -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+
+graphvizcreator_GVClassNodeDrawer  [
+shape="record",
+label= "{graphvizcreator_GVClassNodeDrawer|+ \<init\>(umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
+];
+graphvizcreator_GVClassNodeDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVClassNodeDrawer -> umlentities_IUMLNode [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVClassNodeDrawer -> umlentities_AbstractDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+graphvizcreator_GVDependencyDrawer  [
+shape="record",
+label= "{graphvizcreator_GVDependencyDrawer|+ \<init\>(umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
+];
+graphvizcreator_GVDependencyDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVDependencyDrawer -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVDependencyDrawer -> umlentities_AbstractDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+graphvizcreator_GVDrawerFactory  [
+shape="record",
+label= "{graphvizcreator_GVDrawerFactory|+ \<init\>(void) : void\l+ populate(void) : void\l}" 
+];
+graphvizcreator_GVDrawerFactory -> umlentities_AbstractDrawerFactory [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+graphvizcreator_GVFieldDrawer  [
+shape="record",
+label= "{graphvizcreator_GVFieldDrawer|+ \<init\>(umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
+];
+graphvizcreator_GVFieldDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVFieldDrawer -> umlentities_UMLField [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVFieldDrawer -> umlentities_AbstractDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+graphvizcreator_GVMethodDrawer  [
+shape="record",
+label= "{graphvizcreator_GVMethodDrawer|+ \<init\>(umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
+];
+graphvizcreator_GVMethodDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVMethodDrawer -> umlentities_UMLMethod [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_GVMethodDrawer -> umlentities_AbstractDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+graphvizcreator_RenderPhase  [
+shape="record",
+label= "{graphvizcreator_RenderPhase|+ \<init\>(void) : void\l+ runPhase(projectRunner_ProjectModel, void) : void\l+ getResults(projectRunner_ProjectModel) : projectRunner_ProjectModel\l}" 
+];
+graphvizcreator_RenderPhase -> projectRunner_Configuration [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_RenderPhase -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_RenderPhase -> projectRunner_Phase [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+graphvizcreator_SingletonDrawer  [
+shape="record",
+label= "{graphvizcreator_SingletonDrawer|+ \<init\>(umlentities_IDrawer, umlentities_IUMLEntity, void) : void\l+ draw(java_lang_String) : java_lang_String\l}" 
+];
+graphvizcreator_SingletonDrawer -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_SingletonDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_SingletonDrawer -> patternparser_SingletonPattern [arrowhead="vee", style="dashed", dir="forward" ]; 
+graphvizcreator_SingletonDrawer -> graphvizcreator_AbstractPatternDrawer [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_AbstractPatternDetector  [
+shape="record",
+label= "{\<\<Abstract\>\>\npatternparser_AbstractPatternDetector|+ \<init\>(void) : void\l+ getPatterns(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ setNodes(java_util_List\<umlentities_IUMLNode\>, void) : void\l+ getNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ addPatterns(java_util_List\<umlentities_IUMLNode\>, void) : void\l+ getAllNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l}" 
+];
+patternparser_AbstractPatternDetector -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_AbstractPatternDetector -> patternparser_IPatternDetector [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+patternparser_AbstractPatternNode  [
+shape="record",
+label= "{\<\<Abstract\>\>\npatternparser_AbstractPatternNode|+ \<init\>(umlentities_IUMLNode, void) : void\l+ \<init\>(void) : void\l+ getClassName(java_lang_String) : java_lang_String\l+ getMethods(java_util_List\<umlentities_UMLMethod\>) : java_util_List\<umlentities_UMLMethod\>\l+ getFields(java_util_List\<umlentities_UMLField\>) : java_util_List\<umlentities_UMLField\>\l+ addDependency(umlentities_IUMLDependency, void) : void\l+ removeDependency(umlentities_IUMLDependency, void) : void\l+ addMethod(umlentities_UMLMethod, void) : void\l+ addField(umlentities_UMLField, void) : void\l+ removeMehtod(java_lang_String, void) : void\l+ removeField(java_lang_String, void) : void\l+ getProtectionLevel(java_lang_String) : java_lang_String\l+ getDependencies(java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ getPatternName(java_lang_String) : java_lang_String\l+ getUnderlyingNode(umlentities_IUMLNode) : umlentities_IUMLNode\l+ getClassType(java_lang_String) : java_lang_String\l}" 
+];
+patternparser_AbstractPatternNode -> umlentities_UMLField [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_AbstractPatternNode -> umlentities_UMLMethod [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_AbstractPatternNode -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_AbstractPatternNode -> umlentities_IUMLNode [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_AbstractPatternNode -> umlentities_IUMLNode [arrowhead="onormal", style="dashed", dir="forward" ]; 
+patternparser_AbstractPatternNode -> umlentities_UMLEntity [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_BadInheritanceDependencyPattern  [
+shape="record",
+label= "{patternparser_BadInheritanceDependencyPattern|+ java_lang_String : TYPE\l|+ \<init\>(umlentities_IUMLDependency, void) : void\l+ \<init\>(void) : void\l+ getColor(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+patternparser_BadInheritanceDependencyPattern -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_BadInheritanceDependencyPattern -> patternparser_UMLDependencyDecorator [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_BadInheritancePattern  [
+shape="record",
+label= "{patternparser_BadInheritancePattern|+ java_lang_String : TYPE\l|+ \<init\>(umlentities_IUMLNode, void) : void\l+ \<init\>(void) : void\l+ getClassColor(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+patternparser_BadInheritancePattern -> umlentities_IUMLNode [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_BadInheritancePattern -> patternparser_AbstractPatternNode [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_CompositionVSInheritanceDetector  [
+shape="record",
+label= "{patternparser_CompositionVSInheritanceDetector|+ \<init\>(void) : void\l+ detectPattern(void) : void\l}" 
+];
+patternparser_CompositionVSInheritanceDetector -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_CompositionVSInheritanceDetector -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_CompositionVSInheritanceDetector -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_CompositionVSInheritanceDetector -> patternparser_AbstractPatternDetector [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_IPatternDetector  [
+shape="record",
+label= "{\<\<Interface\>\>\npatternparser_IPatternDetector|+ getPatterns(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ setNodes(java_util_List\<umlentities_IUMLNode\>, void) : void\l+ detectPattern(void) : void\l+ getAllNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ getNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ addPatterns(java_util_List\<umlentities_IUMLNode\>, void) : void\l}" 
+];
+patternparser_IPatternDetector -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+
+patternparser_PatternParser  [
+shape="record",
+label= "{patternparser_PatternParser|+ \<init\>(java_util_List\<umlentities_IUMLNode\>, java_util_List\<patternparser_IPatternDetector\>, void) : void\l+ detectPatterns(void) : void\l+ getOriginalNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ getUpdatedlNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ getCurrentDetectors(java_util_List\<patternparser_IPatternDetector\>) : java_util_List\<patternparser_IPatternDetector\>\l+ setUmlNodes(java_util_List\<umlentities_IUMLNode\>, void) : void\l+ addDetector(patternparser_IPatternDetector, void) : void\l+ removDetector(patternparser_IPatternDetector, void) : void\l}" 
+];
+patternparser_PatternParser -> patternparser_IPatternDetector [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_PatternParser -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+
+patternparser_PatternParserPhase  [
+shape="record",
+label= "{patternparser_PatternParserPhase|+ \<init\>(void) : void\l+ runPhase(projectRunner_ProjectModel, void) : void\l+ getResults(projectRunner_ProjectModel) : projectRunner_ProjectModel\l}" 
+];
+patternparser_PatternParserPhase -> projectRunner_Configuration [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_PatternParserPhase -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_PatternParserPhase -> patternparser_IPatternDetector [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_PatternParserPhase -> projectRunner_Phase [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+patternparser_SingletonDetector  [
+shape="record",
+label= "{patternparser_SingletonDetector|+ \<init\>(void) : void\l+ detectPattern(void) : void\l}" 
+];
+patternparser_SingletonDetector -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_SingletonDetector -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_SingletonDetector -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+patternparser_SingletonDetector -> patternparser_AbstractPatternDetector [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_SingletonPattern  [
+shape="record",
+label= "{patternparser_SingletonPattern|+ java_lang_String : TYPE\l|+ \<init\>(umlentities_IUMLNode, void) : void\l+ \<init\>(void) : void\l+ getTag(java_lang_String) : java_lang_String\l+ getBorderColor(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+patternparser_SingletonPattern -> umlentities_IUMLNode [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_SingletonPattern -> patternparser_AbstractPatternNode [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+patternparser_UMLDependencyDecorator  [
+shape="record",
+label= "{\<\<Abstract\>\>\npatternparser_UMLDependencyDecorator|+ \<init\>(umlentities_IUMLDependency, void) : void\l+ \<init\>(void) : void\l+ getTo(java_lang_String) : java_lang_String\l+ getFrom(java_lang_String) : java_lang_String\l+ getIsCollection(boolean) : boolean\l+ getIsBiDirectional(boolean) : boolean\l+ setIsBiDirectional(boolean, void) : void\l+ setIsCollection(boolean, void) : void\l+ getUnderlying(umlentities_IUMLDependency) : umlentities_IUMLDependency\l+ getDependencyType(java_lang_String) : java_lang_String\l}" 
+];
+patternparser_UMLDependencyDecorator -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", dir="forward" ]; 
+patternparser_UMLDependencyDecorator -> umlentities_IUMLDependency [arrowhead="onormal", style="dashed", dir="forward" ]; 
+patternparser_UMLDependencyDecorator -> umlentities_UMLEntity [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+projectparser_IProjectParser  [
+shape="record",
+label= "{\<\<Interface\>\>\nprojectparser_IProjectParser|+ parseClasses(void) : void\l+ getClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>) : java_util_List\<org_objectweb_asm_tree_ClassNode\>\l+ getClassNames(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ addClassName(java_lang_String, void) : void\l+ removeClassName(java_lang_String, void) : void\l}" 
+];
+
+projectparser_ProjectParser  [
+shape="record",
+label= "{projectparser_ProjectParser|+ \<init\>(java_util_List\<java_lang_String\>, void) : void\l+ parseClasses(void) : void\l+ getClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>) : java_util_List\<org_objectweb_asm_tree_ClassNode\>\l+ getClassNames(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ addClassName(java_lang_String, void) : void\l+ removeClassName(java_lang_String, void) : void\l}" 
+];
+projectparser_ProjectParser -> projectparser_IProjectParser [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+projectparser_ProjectParserDecorator  [
+shape="record",
+label= "{\<\<Abstract\>\>\nprojectparser_ProjectParserDecorator|+ \<init\>(projectparser_IProjectParser, void) : void\l+ parseClasses(void) : void\l+ getClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>) : java_util_List\<org_objectweb_asm_tree_ClassNode\>\l+ getClassNames(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ addClassName(java_lang_String, void) : void\l+ removeClassName(java_lang_String, void) : void\l}" 
+];
+projectparser_ProjectParserDecorator -> projectparser_IProjectParser [arrowhead="vee", style="dashed", dir="forward" ]; 
+projectparser_ProjectParserDecorator -> projectparser_IProjectParser [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+projectparser_ProjectParserPhase  [
+shape="record",
+label= "{projectparser_ProjectParserPhase|+ \<init\>(void) : void\l+ runPhase(projectRunner_ProjectModel, void) : void\l+ getResults(projectRunner_ProjectModel) : projectRunner_ProjectModel\l}" 
+];
+projectparser_ProjectParserPhase -> projectRunner_Configuration [arrowhead="vee", style="dashed", dir="forward" ]; 
+projectparser_ProjectParserPhase -> projectRunner_Phase [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+projectparser_RecursiveProjectParser  [
+shape="record",
+label= "{projectparser_RecursiveProjectParser|+ \<init\>(projectparser_IProjectParser, java_util_List\<java_lang_String\>, void) : void\l+ parseClasses(void) : void\l}" 
+];
+projectparser_RecursiveProjectParser -> projectparser_IProjectParser [arrowhead="vee", style="dashed", dir="forward" ]; 
+projectparser_RecursiveProjectParser -> projectparser_ProjectParserDecorator [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+projectRunner_Configuration  [
+shape="record",
+label= "{projectRunner_Configuration|+ final static getInstance(projectRunner_Configuration) : projectRunner_Configuration\l+ getProtectLevel(java_lang_String) : java_lang_String\l+ getWhiteList(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ getBlackList(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ isRecursive(boolean) : boolean\l+ getDetectors(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ getPatternsToDrawers(java_util_Map\<java_lang_String, java_lang_String\>) : java_util_Map\<java_lang_String, java_lang_String\>\l+ isSyntheicMethodsOn(boolean) : boolean\l+ setProtectLevel(java_lang_String, void) : void\l+ setWhiteList(java_util_List\<java_lang_String\>, void) : void\l+ setBlackList(java_util_List\<java_lang_String\>, void) : void\l+ setRecursive(boolean, void) : void\l+ setDetectors(java_util_List\<java_lang_String\>, void) : void\l+ setPatternsToDrawers(java_util_Map\<java_lang_String, java_lang_String\>, void) : void\l+ setSyntheicMethodsOn(boolean, void) : void\l+ setFileCreator(java_lang_String, void) : void\l+ getFileCreator(java_lang_String) : java_lang_String\l}" 
+];
+projectRunner_Configuration -> projectRunner_Configuration [arrowhead="vee", style="dashed", dir="forward" ]; 
+
+projectRunner_Phase  [
+shape="record",
+label= "{\<\<Interface\>\>\nprojectRunner_Phase|+ runPhase(projectRunner_ProjectModel, void) : void\l+ getResults(projectRunner_ProjectModel) : projectRunner_ProjectModel\l}" 
+];
+
+projectRunner_ProgramRunner  [
+shape="record",
+label= "{projectRunner_ProgramRunner|+ \<init\>(void) : void\l+ \<init\>(java_lang_String, void) : void\l+ loadProgram(void) : void\l+ executeProgram(projectRunner_ProjectModel) : projectRunner_ProjectModel\l+ setSettingsFile(java_lang_String, void) : void\l}" 
+];
+projectRunner_ProgramRunner -> projectRunner_Phase [arrowhead="vee", style="dashed", dir="forward" ]; 
+
+umlentities_AbstractDrawer  [
+shape="record",
+label= "{\<\<Abstract\>\>\numlentities_AbstractDrawer|+ \<init\>(umlentities_IUMLEntity, void) : void\l+ \<init\>(void) : void\l+ getEntity(umlentities_IUMLEntity) : umlentities_IUMLEntity\l+ setEntity(umlentities_IUMLEntity, void) : void\l}" 
+];
+umlentities_AbstractDrawer -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_AbstractDrawer -> umlentities_IDrawer [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+umlentities_AbstractDrawerFactory  [
+shape="record",
+label= "{\<\<Abstract\>\>\numlentities_AbstractDrawerFactory|+ \<init\>(void) : void\l+ createDrawer(umlentities_IUMLEntity, umlentities_IDrawer) : umlentities_IDrawer\l+ addDrawer(java_lang_String, java_lang_Class\<null\>, void) : void\l+ populate(void) : void\l}" 
+];
+umlentities_AbstractDrawerFactory -> patternparser_AbstractPatternNode [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_AbstractDrawerFactory -> patternparser_UMLDependencyDecorator [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_AbstractDrawerFactory -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_AbstractDrawerFactory -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_AbstractDrawerFactory -> umlentities_IDrawerFactory [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+umlentities_ClassInheritanceDependency  [
+shape="record",
+label= "{umlentities_ClassInheritanceDependency|+ java_lang_String : CLASS_TYPE\l+ java_lang_String : TYPE\l|+ \<init\>(java_lang_String, java_lang_String, boolean, void) : void\l+ getDependencyType(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_ClassInheritanceDependency -> umlentities_UMLDependency [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_CreatesDependency  [
+shape="record",
+label= "{umlentities_CreatesDependency|+ java_lang_String : CLASS_TYPE\l+ java_lang_String : TYPE\l|+ \<init\>(java_lang_String, java_lang_String, boolean, void) : void\l+ getDependencyType(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_CreatesDependency -> umlentities_UMLDependency [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_HasADependency  [
+shape="record",
+label= "{umlentities_HasADependency|+ java_lang_String : CLASS_TYPE\l+ java_lang_String : TYPE\l|+ \<init\>(java_lang_String, java_lang_String, boolean, void) : void\l+ getDependencyType(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_HasADependency -> umlentities_UMLDependency [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_IDrawer  [
+shape="record",
+label= "{\<\<Interface\>\>\numlentities_IDrawer|+ draw(java_lang_String) : java_lang_String\l+ getEntity(umlentities_IUMLEntity) : umlentities_IUMLEntity\l+ setEntity(umlentities_IUMLEntity, void) : void\l}" 
+];
+
+umlentities_IDrawerFactory  [
+shape="record",
+label= "{\<\<Interface\>\>\numlentities_IDrawerFactory|+ createDrawer(umlentities_IUMLEntity, umlentities_IDrawer) : umlentities_IDrawer\l+ addDrawer(java_lang_String, java_lang_Class\<null\>, void) : void\l}" 
+];
+umlentities_IDrawerFactory -> umlentities_IUMLEntity [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_IDrawerFactory -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+
+umlentities_InterfaceImplementDependency  [
+shape="record",
+label= "{umlentities_InterfaceImplementDependency|+ java_lang_String : CLASS_TYPE\l+ java_lang_String : TYPE\l|+ \<init\>(java_lang_String, java_lang_String, boolean, void) : void\l+ getDependencyType(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_InterfaceImplementDependency -> umlentities_UMLDependency [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_IUMLDependency  [
+shape="record",
+label= "{\<\<Interface\>\>\numlentities_IUMLDependency|+ getTo(java_lang_String) : java_lang_String\l+ getFrom(java_lang_String) : java_lang_String\l+ getIsCollection(boolean) : boolean\l+ getIsBiDirectional(boolean) : boolean\l+ setIsBiDirectional(boolean, void) : void\l+ setIsCollection(boolean, void) : void\l+ getDependencyType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_IUMLDependency -> umlentities_IUMLEntity [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+umlentities_IUMLEntity  [
+shape="record",
+label= "{\<\<Interface\>\>\numlentities_IUMLEntity|+ draw(java_lang_String) : java_lang_String\l+ setDrawer(umlentities_IDrawer, void) : void\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_IUMLEntity -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="both" ]; 
+
+umlentities_IUMLNode  [
+shape="record",
+label= "{\<\<Interface\>\>\numlentities_IUMLNode|+ getDependencies(java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ getClassName(java_lang_String) : java_lang_String\l+ getMethods(java_util_List\<umlentities_UMLMethod\>) : java_util_List\<umlentities_UMLMethod\>\l+ getFields(java_util_List\<umlentities_UMLField\>) : java_util_List\<umlentities_UMLField\>\l+ addDependency(umlentities_IUMLDependency, void) : void\l+ removeDependency(umlentities_IUMLDependency, void) : void\l+ addMethod(umlentities_UMLMethod, void) : void\l+ addField(umlentities_UMLField, void) : void\l+ removeMehtod(java_lang_String, void) : void\l+ removeField(java_lang_String, void) : void\l+ getProtectionLevel(java_lang_String) : java_lang_String\l+ getClassType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_IUMLNode -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_IUMLNode -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_IUMLNode -> umlentities_UMLField [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_IUMLNode -> umlentities_IUMLEntity [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+umlentities_MethodRetArgDependency  [
+shape="record",
+label= "{umlentities_MethodRetArgDependency|+ java_lang_String : TYPE\l+ java_lang_String : CLASS_TYPE\l|+ \<init\>(java_lang_String, java_lang_String, boolean, void) : void\l+ getType(java_lang_String) : java_lang_String\l+ getDependencyType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_MethodRetArgDependency -> umlentities_UMLDependency [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLAbstractClass  [
+shape="record",
+label= "{umlentities_UMLAbstractClass|+ java_lang_String : TYPE\l+ java_lang_String : CLASS_TYPE\l|+ \<init\>(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_UMLMethod\>, java_util_List\<umlentities_UMLField\>, java_lang_String, java_lang_String, void) : void\l+ getType(java_lang_String) : java_lang_String\l+ getClassType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_UMLAbstractClass -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLAbstractClass -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLAbstractClass -> umlentities_UMLField [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLAbstractClass -> umlentities_UMLNode [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLClass  [
+shape="record",
+label= "{umlentities_UMLClass|+ java_lang_String : TYPE\l+ java_lang_String : CLASS_TYPE\l|+ \<init\>(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_UMLMethod\>, java_util_List\<umlentities_UMLField\>, java_lang_String, java_lang_String, void) : void\l+ getType(java_lang_String) : java_lang_String\l+ getClassType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_UMLClass -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLClass -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLClass -> umlentities_UMLField [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLClass -> umlentities_UMLNode [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLDependency  [
+shape="record",
+label= "{\<\<Abstract\>\>\numlentities_UMLDependency|+ \<init\>(java_lang_String, java_lang_String, boolean, void) : void\l+ getTo(java_lang_String) : java_lang_String\l+ getFrom(java_lang_String) : java_lang_String\l+ getIsCollection(boolean) : boolean\l+ getIsBiDirectional(boolean) : boolean\l+ setIsBiDirectional(boolean, void) : void\l+ setIsCollection(boolean, void) : void\l+ equals(java_lang_Object, boolean) : boolean\l}" 
+];
+umlentities_UMLDependency -> umlentities_IUMLDependency [arrowhead="onormal", style="dashed", dir="forward" ]; 
+umlentities_UMLDependency -> umlentities_UMLEntity [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLEntity  [
+shape="record",
+label= "{\<\<Abstract\>\>\numlentities_UMLEntity|+ \<init\>(void) : void\l+ \<init\>(umlentities_IDrawer, void) : void\l+ draw(java_lang_String) : java_lang_String\l+ setDrawer(umlentities_IDrawer, void) : void\l}" 
+];
+umlentities_UMLEntity -> umlentities_IDrawer [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentities_UMLEntity -> umlentities_IUMLEntity [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+umlentities_UMLField  [
+shape="record",
+label= "{umlentities_UMLField|+ java_lang_String : TYPE\l|+ \<init\>(java_lang_String, java_lang_String, java_util_List\<java_lang_String\>, java_lang_String, void) : void\l+ getModifiers(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ getVarName(java_lang_String) : java_lang_String\l+ getFieldType(java_lang_String) : java_lang_String\l+ getProtectionLevel(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_UMLField -> umlentities_UMLEntity [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLInterface  [
+shape="record",
+label= "{umlentities_UMLInterface|+ java_lang_String : TYPE\l+ java_lang_String : CLASS_TYPE\l|+ \<init\>(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_UMLMethod\>, java_util_List\<umlentities_UMLField\>, java_lang_String, java_lang_String, void) : void\l+ getType(java_lang_String) : java_lang_String\l+ getClassType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_UMLInterface -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLInterface -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLInterface -> umlentities_UMLField [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLInterface -> umlentities_UMLNode [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLMethod  [
+shape="record",
+label= "{umlentities_UMLMethod|+ java_lang_String : TYPE\l|+ \<init\>(java_lang_String, java_lang_String, java_util_List\<java_lang_String\>, java_util_List\<java_lang_String\>, java_lang_String, void) : void\l+ getName(java_lang_String) : java_lang_String\l+ getArguments(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ addArguments(java_lang_String, void) : void\l+ removeArguments(java_lang_String, void) : void\l+ getModifier(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ getReturnType(java_lang_String) : java_lang_String\l+ getProtectionLevel(java_lang_String) : java_lang_String\l+ getType(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_UMLMethod -> umlentities_UMLEntity [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentities_UMLNode  [
+shape="record",
+label= "{\<\<Abstract\>\>\numlentities_UMLNode|+ \<init\>(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_UMLMethod\>, java_util_List\<umlentities_UMLField\>, java_lang_String, java_lang_String, void) : void\l+ getDependencies(java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ getClassName(java_lang_String) : java_lang_String\l+ getMethods(java_util_List\<umlentities_UMLMethod\>) : java_util_List\<umlentities_UMLMethod\>\l+ getFields(java_util_List\<umlentities_UMLField\>) : java_util_List\<umlentities_UMLField\>\l+ addDependency(umlentities_IUMLDependency, void) : void\l+ removeDependency(umlentities_IUMLDependency, void) : void\l+ addMethod(umlentities_UMLMethod, void) : void\l+ addField(umlentities_UMLField, void) : void\l+ removeMehtod(java_lang_String, void) : void\l+ removeField(java_lang_String, void) : void\l+ getProtectionLevel(java_lang_String) : java_lang_String\l}" 
+];
+umlentities_UMLNode -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLNode -> umlentities_UMLMethod [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLNode -> umlentities_UMLField [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentities_UMLNode -> umlentities_IUMLNode [arrowhead="onormal", style="dashed", dir="forward" ]; 
+umlentities_UMLNode -> umlentities_UMLEntity [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentityparser_AbstractEntityParser  [
+shape="record",
+label= "{\<\<Abstract\>\>\numlentityparser_AbstractEntityParser|+ \<init\>(void) : void\l+ \<init\>(java_util_List\<org_objectweb_asm_tree_ClassNode\>, void) : void\l+ setClasses(java_util_List\<org_objectweb_asm_tree_ClassNode\>, void) : void\l+ getNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ getClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>) : java_util_List\<org_objectweb_asm_tree_ClassNode\>\l+ parseClasses(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ parseClass(org_objectweb_asm_tree_ClassNode, umlentities_IUMLNode) : umlentities_IUMLNode\l+ parseField(org_objectweb_asm_tree_FieldNode, umlentities_UMLField) : umlentities_UMLField\l+ parseMethod(org_objectweb_asm_tree_MethodNode, umlentities_UMLMethod) : umlentities_UMLMethod\l+ parseMethodDependencies(umlentities_UMLMethod, java_lang_String, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ parseFieldDependency(umlentities_UMLField, java_lang_String, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ parseInstructions(org_objectweb_asm_tree_MethodNode, java_lang_String, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ optimizeDependencies(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ removeNonParsedDependencies(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<java_lang_String\>, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ createBiDirectionalDependencies(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ removeLowerClassifiedDependencies(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ higherClassification(umlentities_IUMLDependency, umlentities_IUMLDependency, int) : int\l+ removeDuplicateDependencies(java_util_List\<umlentities_IUMLDependency\>, java_util_List\<umlentities_IUMLDependency\>) : java_util_List\<umlentities_IUMLDependency\>\l+ getFieldType(java_lang_String, java_lang_String) : java_lang_String\l+ getMethodReturnType(java_lang_String, java_lang_String) : java_lang_String\l+ getMethodParameterTypes(java_lang_String, java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l}" 
+];
+umlentityparser_AbstractEntityParser -> umlentities_IUMLNode [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentityparser_AbstractEntityParser -> umlentities_UMLMethod [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentityparser_AbstractEntityParser -> umlentities_UMLField [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentityparser_AbstractEntityParser -> umlentities_IUMLDependency [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentityparser_AbstractEntityParser -> umlentityparser_IEntityParser [arrowhead="onormal", style="dashed", dir="forward" ]; 
+
+umlentityparser_IEntityParser  [
+shape="record",
+label= "{\<\<Interface\>\>\numlentityparser_IEntityParser|+ getArg(java_lang_String) : java_lang_String\l+ validProtectionLevel(java_lang_String, boolean) : boolean\l+ parseClasses(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ getNodes(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ setClasses(java_util_List\<org_objectweb_asm_tree_ClassNode\>, void) : void\l+ parseClass(org_objectweb_asm_tree_ClassNode, umlentities_IUMLNode) : umlentities_IUMLNode\l+ parseMethod(org_objectweb_asm_tree_MethodNode, umlentities_UMLMethod) : umlentities_UMLMethod\l+ parseField(org_objectweb_asm_tree_FieldNode, umlentities_UMLField) : umlentities_UMLField\l+ getClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>) : java_util_List\<org_objectweb_asm_tree_ClassNode\>\l}" 
+];
+umlentityparser_IEntityParser -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentityparser_IEntityParser -> umlentities_UMLMethod [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentityparser_IEntityParser -> umlentities_UMLField [arrowhead="vee", style="dashed", dir="forward" ]; 
+
+umlentityparser_PrivateParser  [
+shape="record",
+label= "{umlentityparser_PrivateParser|+ java_lang_String : ARG\l|+ \<init\>(void) : void\l+ getArg(java_lang_String) : java_lang_String\l+ validProtectionLevel(java_lang_String, boolean) : boolean\l}" 
+];
+umlentityparser_PrivateParser -> umlentityparser_AbstractEntityParser [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentityparser_ProtectedParser  [
+shape="record",
+label= "{umlentityparser_ProtectedParser|+ java_lang_String : ARG\l|+ \<init\>(void) : void\l+ getArg(java_lang_String) : java_lang_String\l+ validProtectionLevel(java_lang_String, boolean) : boolean\l}" 
+];
+umlentityparser_ProtectedParser -> umlentityparser_AbstractEntityParser [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentityparser_PublicParser  [
+shape="record",
+label= "{umlentityparser_PublicParser|+ java_lang_String : ARG\l|+ \<init\>(void) : void\l+ getArg(java_lang_String) : java_lang_String\l+ validProtectionLevel(java_lang_String, boolean) : boolean\l}" 
+];
+umlentityparser_PublicParser -> umlentityparser_AbstractEntityParser [arrowhead="onormal", style="solid", dir="forward" ]; 
+
+umlentityparser_UMLEntityParser  [
+shape="record",
+label= "{umlentityparser_UMLEntityParser|+ \<init\>(java_util_List\<org_objectweb_asm_tree_ClassNode\>, java_util_List\<java_lang_String\>, void) : void\l+ getClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>) : java_util_List\<org_objectweb_asm_tree_ClassNode\>\l+ getEntities(java_util_List\<umlentities_IUMLNode\>) : java_util_List\<umlentities_IUMLNode\>\l+ getCommandLineArgs(java_util_List\<java_lang_String\>) : java_util_List\<java_lang_String\>\l+ getSupportedEntityParsers(java_util_Map\<java_lang_String, umlentityparser_IEntityParser\>) : java_util_Map\<java_lang_String, umlentityparser_IEntityParser\>\l+ setClassNodes(java_util_List\<org_objectweb_asm_tree_ClassNode\>, void) : void\l+ addNewEntityParser(umlentityparser_IEntityParser, void) : void\l+ removeEntityParser(umlentityparser_IEntityParser, void) : void\l+ addClassNode(org_objectweb_asm_tree_ClassNode, void) : void\l+ removeClassNode(org_objectweb_asm_tree_ClassNode, void) : void\l+ parseNodes(void) : void\l}" 
+];
+umlentityparser_UMLEntityParser -> umlentities_IUMLNode [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+umlentityparser_UMLEntityParser -> umlentityparser_IEntityParser [arrowhead="vee", style="dashed", headlabel="1__n", dir="forward"]; 
+
+umlentityparser_UMLEntityParserPhase  [
+shape="record",
+label= "{umlentityparser_UMLEntityParserPhase|+ \<init\>(void) : void\l+ runPhase(projectRunner_ProjectModel, void) : void\l+ getResults(projectRunner_ProjectModel) : projectRunner_ProjectModel\l}" 
+];
+umlentityparser_UMLEntityParserPhase -> projectRunner_Configuration [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentityparser_UMLEntityParserPhase -> umlentityparser_UMLEntityParser [arrowhead="vee", style="dashed", dir="forward" ]; 
+umlentityparser_UMLEntityParserPhase -> projectRunner_Phase [arrowhead="onormal", style="dashed", dir="forward" ]; 
 
 }

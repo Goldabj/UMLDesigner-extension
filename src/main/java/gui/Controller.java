@@ -5,15 +5,18 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -41,10 +44,9 @@ public class Controller implements Initializable{
 	public static final String PUBLIC_PROTECTION = "-public";
 	public static final String DEFAULT_FILECREATOR = "graphvizcreator.GraphVizCreator";
 	
-	// TODO: add patterns to drawers support 
 	
 	@FXML
-	private SplitMenuButton protectionLevelOption;
+	private ChoiceBox<String> protectionLevelOption;
 	
 	@FXML
 	private CheckBox recursionBox;
@@ -69,6 +71,9 @@ public class Controller implements Initializable{
 	
 	@FXML
 	private Button regCreateBttn;
+	
+	@FXML
+	private TextArea patternDrawersArea;
 	
 	public Controller() {
 		this.pm = ProjectModel.getInstance();
@@ -143,7 +148,9 @@ public class Controller implements Initializable{
 		// gets all info from the fields
 		// then sets the config
 		// then calls run
-		String protectLevel = this.protectionLevelOption.getText();
+		this.runner.setSettingsFile("Settings/GUISettings.json");
+		
+		String protectLevel = this.protectionLevelOption.getSelectionModel().getSelectedItem();
 		this.changeProtectionLevel(protectLevel);
 		
 		String filecreator = this.fileCreatorText.getText();
@@ -157,34 +164,61 @@ public class Controller implements Initializable{
 		this.setRecursionOn(recursive);
 		
 		String whiteListText = this.whiteListText.getText();
-		String[] classes = whiteListText.split(",");
-		List<String> whiteList = new ArrayList<>();
-		for (int i = 0; i < classes.length; i++) {
-			String clazz = classes[i].trim();
-			whiteList.add(clazz);
+		if (!whiteListText.isEmpty()) {
+			String[] classes = whiteListText.split(",");
+			List<String> whiteList = new ArrayList<>();
+			for (int i = 0; i < classes.length; i++) {
+				String clazz = classes[i].trim();
+				whiteList.add(clazz);
+			}
+			this.setWhiteList(whiteList);
+		}else {
+			this.setWhiteList(new ArrayList<>());
 		}
-		this.setWhiteList(whiteList);
+		
 		
 		String blackListText = this.blackListText.getText();
-		String[] bClasses = blackListText.split(",");
-		List<String> blackList = new ArrayList<>();
-		for (int i = 0; i < bClasses.length; i++) {
-			String clazz = bClasses[i].trim();
-			blackList.add(clazz);
+		if (!blackListText.isEmpty()) {
+			String[] bClasses = blackListText.split(",");
+			List<String> blackList = new ArrayList<>();
+			for (int i = 0; i < bClasses.length; i++) {
+				String clazz = bClasses[i].trim();
+				blackList.add(clazz);
+			}
+			this.setBlackList(blackList);
+		}else {
+			this.setBlackList(new ArrayList<>());
 		}
-		this.setBlackList(blackList);
+		
 		
 		String patternDectText = this.patternDetectorsText.getText();
-		String[] detectors = patternDectText.split(",");
-		List<String> detectorsL = new ArrayList<>();
-		for (int i = 0; i < detectors.length; i++) {
-			String dect = detectors[i].trim();
-			detectorsL.add(dect);
+		if (!patternDectText.isEmpty()) {
+			String[] detectors = patternDectText.split(",");
+			List<String> detectorsL = new ArrayList<>();
+			for (int i = 0; i < detectors.length; i++) {
+				String dect = detectors[i].trim();
+				detectorsL.add(dect);
+			}
+			this.setPatternDetectors(detectorsL);
+		}else{
+			this.setPatternDetectors(new ArrayList<>());
 		}
-		this.setPatternDetectors(detectorsL);
-	
 		
-		// TODO: add patterns and their drawers
+	
+		Map<String, String> patsToDrawers = new HashMap<>();
+		String patternDrawersTest = this.patternDrawersArea.getText();
+		if (!patternDrawersTest.isEmpty()) {
+			String[] pairs = patternDrawersTest.split(",");
+			for (int i = 0; i < pairs.length; i++) {
+				String pair = pairs[i];
+				String[] splitup = pair.split(":");
+				String pattern = splitup[0].trim();
+				String drawer = splitup[1].trim();
+				patsToDrawers.put(pattern, drawer);
+			}
+		}	
+		this.setPatternsToDrawers(patsToDrawers);
+		
 		
 		this.run();
 	}
@@ -198,7 +232,8 @@ public class Controller implements Initializable{
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+		this.protectionLevelOption.setItems(FXCollections.observableArrayList(
+				PRIVATE_PROTECTIOIN, PROTECTED_PROTECTION,PUBLIC_PROTECTION));
 	}
 	
 
