@@ -74,6 +74,9 @@ public class Controller {
 		this.pm.setConfiguration(this.config);
 		
 		this.runner.loadProgram();
+		if (!settingsFileCustom) {
+			this.runner.setSettingsFile(defaultSettingsFile);
+		}
 		this.pm = this.runner.executeProgram();
 		
 		
