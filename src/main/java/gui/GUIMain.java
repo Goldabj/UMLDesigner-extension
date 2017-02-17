@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import projectRunner.Phase;
@@ -23,6 +24,7 @@ public class GUIMain extends Application implements Phase{
 		Parent root = FXMLLoader.load(getClass().getResource("BATest.fxml"));
 		Scene scene1 = new Scene(root);
 		primaryStage.setTitle("BBVSquad :)");
+		primaryStage.getIcons().add(new Image("/gui/download.jpg"));
 		primaryStage.setScene(scene1);
 		primaryStage.show();
 		

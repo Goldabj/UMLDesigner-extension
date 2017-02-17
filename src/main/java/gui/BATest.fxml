@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="794.0" prefWidth="1163.0" style="-fx-background-color: lightsteelblue; -fx-border-color: black; -fx-padding: 5; -fx-effect: dropshadow(two-pass-box , black, 5, 0.4, -6, 6); -fx-background-image: url(&quot;http://www.azahner.com/portfolio-hires/whitechap.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+<AnchorPane prefHeight="794.0" prefWidth="1163.0" style="-fx-background-color: lightsteelblue; -fx-border-color: black; -fx-padding: 5; -fx-effect: dropshadow(two-pass-box , black, 5, 0.4, -6, 6); -fx-background-image: url(&quot;https://i1.rgstatic.net/ii/profile.image/AS%3A350413124587520@1460556407202_xl/Chandan_Rupakheti.png&quot;);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
    <children>
       <Label id="whiteListClassesLabel" layoutX="943.0" layoutY="290.0" prefHeight="30.0" prefWidth="150.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Whitelist Classes" />
       <Label id="blackListClassesLabel" layoutX="944.0" layoutY="454.0" prefHeight="30.0" prefWidth="159.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="BlackList Classes" />
