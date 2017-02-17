@@ -10,32 +10,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="811.0" prefWidth="1091.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+<AnchorPane prefHeight="794.0" prefWidth="1163.0" style="-fx-background-color: lightsteelblue; -fx-border-color: black; -fx-padding: 5; -fx-effect: dropshadow(two-pass-box , black, 5, 0.4, -6, 6); -fx-background-image: url(&quot;http://www.azahner.com/portfolio-hires/whitechap.jpg&quot;);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
    <children>
-      <Label id="whiteListClassesLabel" layoutX="943.0" layoutY="290.0" text="Whitelist Classes" />
-      <Label id="blackListClassesLabel" layoutX="944.0" layoutY="454.0" text="BlackList Classes" />
-      <CheckBox id="recursionOption" fx:id="recursionBox" layoutX="219.0" layoutY="433.0" mnemonicParsing="false" text="Recursion" />
-      <Label id="setBlackListClassesLabel" layoutX="940.0" layoutY="595.0" text="Pattern Detectors" />
-      <TextField id="settingsFileInput" fx:id="settingsFileText" layoutX="651.0" layoutY="131.0" promptText="Specify Settings File" />
-      <Label id="settingsFileLabel" layoutX="847.0" layoutY="136.0" text="Settings File" />
-      <TextField id="fileCreatorInput" fx:id="fileCreatorText" layoutX="14.0" layoutY="285.0" promptText="ex: graphVizCreator" />
-      <Label id="fileCreatorLabel" layoutX="234.0" layoutY="290.0" text="File Creator" />
-      <Label id="whiteListClassesLabel" layoutX="58.0" layoutY="517.0" text="Please include a patterns with their drawers" />
+      <Label id="whiteListClassesLabel" layoutX="943.0" layoutY="290.0" prefHeight="30.0" prefWidth="150.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Whitelist Classes" />
+      <Label id="blackListClassesLabel" layoutX="944.0" layoutY="454.0" prefHeight="30.0" prefWidth="159.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="BlackList Classes" />
+      <CheckBox id="recursionOption" fx:id="recursionBox" layoutX="143.0" layoutY="448.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-font-size: 20;" text="Recursive" />
+      <Label id="setBlackListClassesLabel" layoutX="940.0" layoutY="585.0" prefHeight="31.0" prefWidth="168.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Pattern Detectors" />
+      <TextField id="settingsFileInput" fx:id="settingsFileText" layoutX="242.0" layoutY="133.0" promptText="Specify Settings File" />
+      <Label id="settingsFileLabel" layoutX="455.0" layoutY="134.0" style="-fx-font-size: 20; -fx-text-fill: white;" text="Settings File" />
+      <TextField id="fileCreatorInput" fx:id="fileCreatorText" layoutX="57.0" layoutY="304.0" promptText="ex: graphVizCreator" />
+      <Label id="fileCreatorLabel" layoutX="282.0" layoutY="305.0" prefHeight="30.0" prefWidth="107.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="File Creator" />
+      <Label id="whiteListClassesLabel" layoutX="43.0" layoutY="522.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Please include a patterns with their drawers" />
       <TextArea id="whiteListClassesInput" fx:id="whiteListText" layoutX="470.0" layoutY="278.0" prefHeight="128.0" prefWidth="457.0" promptText="Specify Whitelist Classes (seperate with commas)" />
       <TextArea id="blackListInput" fx:id="blackListText" layoutX="470.0" layoutY="424.0" prefHeight="128.0" prefWidth="457.0" promptText="Specify BlackList Classes (seperate with commas)" />
       <TextArea id="patternDetectorInput" fx:id="patternDetectorsText" layoutX="470.0" layoutY="562.0" prefHeight="128.0" prefWidth="457.0" promptText="Specify Pattern Dectecors (seperate with commas)" />
-      <Separator layoutX="7.0" layoutY="198.0" prefHeight="21.0" prefWidth="1077.0" />
-      <Label id="settingsFileInstructions" layoutX="154.0" layoutY="136.0" text="If you have your own settings file, please use this top option only" />
-      <Label id="whiteListClassesLabel" layoutX="396.0" layoutY="33.0" text="BBV UML Designer">
+      <Separator layoutX="8.0" layoutY="196.0" prefHeight="22.0" prefWidth="1155.0" />
+      <Label id="settingsFileInstructions" layoutX="234.0" layoutY="79.0" prefHeight="36.0" prefWidth="624.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 25; -fx-underline: true;" text="If you have your own settings file, please use this top option only" />
+      <Label id="whiteListClassesLabel" layoutX="319.0" style="-fx-font-weight: bold; -fx-font-size: 60; -fx-underline: true; -fx-text-fill: lime;" text="BBV UML Designer">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label id="defaultInstructions" layoutX="256.0" layoutY="237.0" text="If you want to run UML Designer using the default settings, use this bottom option only" />
-      <Button id="createUsingSettingsFile" fx:id="settingsCreateBttn" layoutX="954.0" layoutY="131.0" mnemonicParsing="false" onAction="#handleSettingsFileRun" text="Create Design" />
-      <Button id="createUsingDefault" fx:id="regCreateBttn" layoutX="455.0" layoutY="739.0" mnemonicParsing="false" onAction="#handleRegRun" text="Create Design" />
+      <Label id="defaultInstructions" layoutX="88.0" layoutY="229.0" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 25; -fx-underline: true;" text="If you want to run UML Designer using the default settings, use this bottom option only" />
+      <Button id="createUsingSettingsFile" fx:id="settingsCreateBttn" layoutX="699.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleSettingsFileRun" style="-fx-background-color: lime; -fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(two-pass-box , black, 5, 0.1, -4, 4);" text="Create Design" />
+      <Button id="createUsingDefault" fx:id="regCreateBttn" layoutX="483.0" layoutY="716.0" mnemonicParsing="false" onAction="#handleRegRun" style="-fx-effect: dropshadow(two-pass-box , black, 5, 0.1, -4, 4); -fx-font-weight: bold; -fx-font-size: 20; -fx-background-color: lime;" text="Create Design" />
       <TextArea fx:id="patternDrawersArea" layoutX="19.0" layoutY="562.0" prefHeight="128.0" prefWidth="430.0" promptText="for each pattern enter in the following format: &lt;patternNode&gt; : &lt;patternDrawer&gt;, " />
-      <ChoiceBox fx:id="protectionLevelOption" layoutX="42.0" layoutY="375.0" prefWidth="150.0" />
-      <Label layoutX="219.0" layoutY="380.0" text="Protection Level" />
+      <ChoiceBox fx:id="protectionLevelOption" layoutX="68.0" layoutY="382.0" prefWidth="150.0" />
+      <Label layoutX="244.0" layoutY="382.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="Protection Level" />
    </children>
 </AnchorPane>
