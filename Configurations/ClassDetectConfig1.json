@@ -1,0 +1,44 @@
+{
+
+// Editor
+
+    // controls protection. could be "private", "protected" , or "public" 
+    "protection.level" : "private",
+    
+    // controls what classes to draw
+    "whitelist" : ["java.lang.String", "testclasses.StringCreator", "testclasses.StringCreator2", 
+    		"testclasses.StringCreator3", "testclasses.StringCreator4"],
+    
+    //controls what classes to not draw
+    "blacklist" : [],
+    
+    //controls whether we will parse super classes
+	"recursive" : false,
+	
+	//specifies what patterns to detect in the UML
+	"pattern.detectors" : ["patternparser.SingletonDetector", "patternparser.CompositionVSInheritanceDetector",
+							"patternparser.BadDIPDetector", "patternparser.DecoratorPatternDetector", "patternparser.AdapterPatternDetector",
+							"patternparser.BadDecoratorPatternDetector", "cstuff.ClassCreatorDetector"], 
+	
+	//specifies the patterns and their drawers for the factory
+	"pattern.drawers" : {
+					"patternparser.SingletonPattern" : "graphvizcreator.SingletonDrawer",
+					"patternparser.BadInheritancePattern" : "graphvizcreator.BadInheritanceDrawer",
+					"patternparser.BadInheritanceDependencyPattern" : "graphvizcreator.BadInheritanceDependencyDrawer", 
+					"patternparser.AdapterDependency" : "graphvizcreator.AdapterDependencyDrawer", 
+					"patternparser.AdapterPattern" : "graphvizcreator.AdapterPatternDrawer", 
+					"patternparser.BadDecoratorDependency" : "graphvizcreator.BadDecoratorDependencyDrawer", 
+					"patternparser.BadDecoratorPattern" : "graphvizcreator.BadDecoratorPatternDrawer", 
+					"patternparser.BadDIPDependency" : "graphvizcreator.BadDIPDependencyDrawer", 
+					"patternparser.BadDIPPattern" : "graphvizcreator.BadDIPPatternDrawer", 
+					"patternparser.DecoratorPattern" : "graphvizcreator.DecoratorPatternDrawer", 
+					"patternparser.DecoratorDependency" : "graphvizcreator.DecoratorDependencyDrawer",
+					"cstuff.ClassCreatorPattern" : "cstuff.ClassCreatorPatternDrawer"},
+	
+	//controls whether to render synthetic methods		
+	"synthetic.methods" : false,
+	
+	//controls which type of file format is used to produce the render format for UML
+	"file.creator" : "graphvizcreator.GraphVizCreator"
+
+}

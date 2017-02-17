@@ -1,0 +1,29 @@
+{
+
+// Settings
+
+    // controls protection
+    "configurationFile" : "./Configurations/LawDemeter1.json",
+    
+    // controls the configuration phase runner
+    "configurationPhase" : "projectRunner.ConfigurationPhase",
+    
+    //controls the project parser phase runner
+    "projectParserPhase" : "projectparser.ProjectParserPhase",
+    
+    //controls the umlEntity parser phase runner
+	"umlEntityParserPhase" : "umlentityparser.UMLEntityParserPhase",
+	
+	//controls the pattern parser phase runner
+	"patternParserPhase" : "bstuff.PatternPhase",
+	
+	//controls the uml rendering phase runner
+	"umlRenderPhase" : "graphvizcreator.RenderPhase",
+	
+	//controls whether the pattern phase is executed
+	"patternPhaseOn" : true, 
+	
+	//controls whether the rendering phase is executed
+	"renderPhaseOn" : true
+
+}

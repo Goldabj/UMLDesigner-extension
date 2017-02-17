@@ -1,0 +1,58 @@
+{
+    // controls protection
+    "protection.level" : "private",
+    
+    // controls what classes to draw
+    "whitelist" : ["graphvizcreator.AbstractPatternDrawer", "graphvizcreator.BadInheritanceDependencyDrawer", 
+    "graphvizcreator.BadInheritanceDrawer", "graphvizcreator.GraphVizCreator", 
+    "graphvizcreator.GVClassNodeDrawer", "graphvizcreator.GVDependencyDrawer", "graphvizcreator.GVDrawerFactory",
+    "graphvizcreator.GVFieldDrawer", "graphvizcreator.GVMethodDrawer", "graphvizcreator.RenderPhase",
+    "graphvizcreator.SingletonDrawer", "patternparser.AbstractPatternDetector", "patternparser.AbstractPatternNode",
+    "patternparser.BadInheritanceDependencyPattern", "patternparser.BadInheritancePattern", 
+    "patternparser.CompositionVSInheritanceDetector", "patternparser.IPatternDetector", "patternparser.PatternParser", 
+    "patternparser.PatternParserPhase", "patternparser.SingletonDetector", "patternparser.SingletonPattern", 
+    "patternparser.UMLDependencyDecorator", "projectparser.IProjectParser", "projectparser.ProjectParser", 
+    "projectparser.ProjectParserDecorator", 
+    "projectparser.ProjectParserPhase", "projectparser.RecursiveProjectParser", "projectRunner.Configuration", "projectRunner.Phase",
+    "projectRunner.ProgramRunner", "umlentities.AbstractDrawer", "umlentities.AbstractDrawerFactory", "umlentities.ClassInheritanceDependency",
+    "umlentities.CreatesDependency", "umlentities.HasADependency", "umlentities.IDrawer", "umlentities.IDrawerFactory",
+    "umlentities.InterfaceImplementDependency", "umlentities.IUMLDependency", "umlentities.IUMLEntity", "umlentities.IUMLNode",
+    "umlentities.MethodRetArgDependency", "umlentities.UMLAbstractClass", "umlentities.UMLClass", "umlentities.UMLDependency",
+	"umlentities.UMLEntity", "umlentities.UMLField", "umlentities.UMLInterface", "umlentities.UMLMethod", "umlentities.UMLNode",
+	"umlentityparser.AbstractEntityParser", "umlentityparser.IEntityParser", "umlentityparser.PrivateParser", "umlentityparser.ProtectedParser",
+	"umlentityparser.PublicParser", "umlentityparser.UMLEntityParser", "umlentityparser.UMLEntityParserPhase"],                                          
+    
+    //controls what classes to not draw
+    "blacklist" : ["java", "asm"],
+    
+    //controls wether we will parse super classes
+	"recursive" : true,
+	
+	//specifies what patterns to detect in the UML
+	"pattern.detectors" : ["patternparser.SingletonDetector", "patternparser.CompositionVSInheritanceDetector",
+							"patternparser.DecoratorPatternDetector", "patternparser.AdapterPatternDetector",
+							"bstuff.LawDemeterDetector"], 
+	
+	//specifies the patterns and their drawers for the factory
+	"pattern.drawers" : {
+					"patternparser.SingletonPattern" : "graphvizcreator.SingletonDrawer",
+					"patternparser.BadInheritancePattern" : "graphvizcreator.BadInheritanceDrawer",
+					"patternparser.BadInheritanceDependencyPattern" : "graphvizcreator.BadInheritanceDependencyDrawer", 
+					"patternparser.AdapterDependency" : "graphvizcreator.AdapterDependencyDrawer", 
+					"patternparser.AdapterPattern" : "graphvizcreator.AdapterPatternDrawer", 
+					"patternparser.BadDecoratorDependency" : "graphvizcreator.BadDecoratorDependencyDrawer", 
+					"patternparser.BadDecoratorPattern" : "graphvizcreator.BadDecoratorPatternDrawer", 
+					"patternparser.BadDIPDependency" : "graphvizcreator.BadDIPDependencyDrawer", 
+					"patternparser.BadDIPPattern" : "graphvizcreator.BadDIPPatternDrawer", 
+					"patternparser.DecoratorPattern" : "graphvizcreator.DecoratorPatternDrawer", 
+					"patternparser.DecoratorDependency" : "graphvizcreator.DecoratorDependencyDrawer",
+					"bstuff.LawDemeterPattern" : "bstuff.LawDemeterPatternDrawer", 
+					"bstuff.LawDemeterDependency" : "bstuff.LawDemeterDependencyDrawer"},
+	
+	//controls whether to render synthetic methods		
+	"synthetic.methods" : false,
+	
+	//controls which type of file format is used to produce the render format for UML
+	"file.creator" : "graphvizcreator.GraphVizCreator"
+
+}
