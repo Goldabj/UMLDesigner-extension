@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="featuretests.ClassCreatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-17T03:52:22" hostname="BENEDIB1-1" time="0.025">
+  <properties/>
+  <testcase name="test" classname="featuretests.ClassCreatorTest" time="0.025"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
