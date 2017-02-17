@@ -1,6 +1,8 @@
 package gui;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -15,13 +17,10 @@ public class GUIMain extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Button allAsbtn = new Button("Click this badass button to give"
-				+ " BBV squad all As on this not as cool project");	
 		
-		
-		StackPane root = new StackPane();
-		root.getChildren().add(allAsbtn);
-		Scene scene1 = new Scene(root, 500, 500);
+		Parent root = FXMLLoader.load(getClass().getResource("BATest.fxml"));
+		Scene scene1 = new Scene(root);
+		primaryStage.setTitle("BBVSquad :)");
 		primaryStage.setScene(scene1);
 		primaryStage.show();
 	}
