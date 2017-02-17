@@ -25,6 +25,7 @@ public class GUIMain extends Application implements Phase{
 		Scene scene1 = new Scene(root);
 		primaryStage.setTitle("BBVSquad :)");
 		primaryStage.getIcons().add(new Image("/gui/download.jpg"));
+		
 		primaryStage.setScene(scene1);
 		primaryStage.show();
 		
